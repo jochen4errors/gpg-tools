@@ -1,6 +1,6 @@
 start=#!/bin/bash
 
-echo "======= GPG Signature Check ========"
+echo "====== GPG Create Signature ========"
 echo "= https://github.com/jochen4errors ="
 echo "===================================="
 
@@ -12,14 +12,9 @@ else
   echo "   🔎 $File ⛔"; exit 1
 fi
 
-if [ -f "$File.sig" ]; then
-  echo "   🔎 $File.sig 🆗"
-else
-  echo "   🔎 »$File.sig« ⛔"; exit 1
-fi
-
 echo "=== working ==="
-gpg --verify --keyserver keyserver.ubuntu.com --auto-key-retrieve $File.sig $File 
+
+gpg -a --output $File.sig --detach-sig $File
 
 echo "=== end ==="
 
