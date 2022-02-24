@@ -5,6 +5,7 @@
 Various tools to handle GPG.
 
 * gpg-tools-check-signature.sh [FILE]
+* gpg-tools-create-signature.sh [FILE]
 
 ---
 
