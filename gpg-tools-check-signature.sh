@@ -13,9 +13,9 @@ else
 fi
 
 if [ -f "$File.asc" ]; then
-  echo "   🔎 $File.asc 🆗"
+  echo "   🔎 $File.sig 🆗"
 else
-  echo "   🔎 $File.asc ⛔"; exit 1
+  echo "   🔎 $File.sig ⛔"; exit 1
 fi
 
 echo "=== working ==="
